@@ -1,0 +1,19 @@
+.calculator {
+    padding: 1%;
+    border: 3px solid var(--light-blue);
+    border-radius: 5%;
+    margin: 5% 35% 35%;
+}
+.calculator-button {
+    background-color: var(--light-blue);
+    height: 30px;
+    border: solid var(--light-blue);
+    border-radius: 3%;
+    text-align: center;
+    margin: 1%;
+    width: 23%;
+}
+.clear-button{
+    padding-top: 0;
+    width: 98%;
+}
