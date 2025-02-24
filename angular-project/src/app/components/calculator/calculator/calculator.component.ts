@@ -51,4 +51,39 @@ export class CalculatorComponent {
       }
     }
   }
+
+  inputRow1: ButtonInputOutputType[]=
+  [
+    {value:'Dark/Light Mode', actionType: 4},
+    {value:'C', actionType:2}
+  ]
+  inputRow2: ButtonInputOutputType[]=
+  [
+    {value:'7', actionType:1},
+    {value:'8', actionType:1},
+    {value:'9', actionType:1},
+    {value:'*', actionType:1}
+  ]
+  inputRow3: ButtonInputOutputType[]=
+  [
+    {value:'4', actionType:1},
+    {value:'5', actionType:1},
+    {value:'6', actionType:1},
+    {value:'-', actionType:1}
+  ]
+  inputRow4: ButtonInputOutputType[]=
+  [
+    {value:'1', actionType:1},
+    {value:'2', actionType:1},
+    {value:'3', actionType:1},
+    {value:'+', actionType:1}
+  ]
+  inputRow5: ButtonInputOutputType[]=
+  [
+    {value:'0', actionType:1},
+    {value:'.', actionType:1},
+    {value:'=', actionType:3},
+    {value:'/', actionType:1}
+  ] 
+  inputRows = [this.inputRow2, this.inputRow3, this.inputRow4, this.inputRow5]
 }
