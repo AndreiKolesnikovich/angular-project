@@ -1,8 +1,14 @@
 <div class="calculator mt-5">
     <h2 class="text-center">Calculator</h2>
             <app-calculator-display [displayValue]="displayData"></app-calculator-display>
-            <div class="row">                
-                <button class="calculator-button clear-button col-md-12" (click)="clear()">C</button>
+            <div class="row">  
+                <app-calculator-button 
+                    class="col-md-6" 
+                    [inputValue]="{value:'Dark/Light Mode', actionType:isDarkMode ? 5 : 4}"
+                    (handleOnButtonClick)="handleOnButtonClick($event)">
+                </app-calculator-button>              
+                <app-calculator-button class="clear-button col-md-6" [inputValue]="{value:'C', actionType:2}"
+                (handleOnButtonClick)="handleOnButtonClick($event)"></app-calculator-button>
             </div>
             <div class="row">
                 <button class="col-md-3 calculator-button" (click)="appendInput('7')">7</button>
