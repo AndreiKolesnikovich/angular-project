@@ -1,37 +1,125 @@
-<div class="calculator mt-5">
+<div [ngClass]="isDarkMode ? 'dark-mode' : '' " class="calculator mt-5">
     <h2 class="text-center">Calculator</h2>
-            <app-calculator-display [displayValue]="displayData"></app-calculator-display>
+            <app-calculator-display 
+                [displayValue]="displayData"
+                [isDarkMode]="isDarkMode">
+            </app-calculator-display>
             <div class="row">  
                 <app-calculator-button 
-                    class="col-md-6" 
-                    [inputValue]="{value:'Dark/Light Mode', actionType:isDarkMode ? 5 : 4}"
+                    class="col-md-6"
+                    [inputValue]="{value:'Dark/Light Mode', actionType: 4}"
+                    [isDarkMode]="isDarkMode"
                     (handleOnButtonClick)="handleOnButtonClick($event)">
-                </app-calculator-button>              
-                <app-calculator-button class="clear-button col-md-6" [inputValue]="{value:'C', actionType:2}"
-                (handleOnButtonClick)="handleOnButtonClick($event)"></app-calculator-button>
+                </app-calculator-button>
+                <app-calculator-button 
+                    class="col-md-6"
+                    [isDarkMode]="isDarkMode"
+                    [inputValue]="{value:'C', actionType:2}"
+                    (handleOnButtonClick)="handleOnButtonClick($event)">
+                </app-calculator-button>
             </div>
             <div class="row">
-                <button class="col-md-3 calculator-button" (click)="appendInput('7')">7</button>
-                <button class="col-md-3 calculator-button" (click)="appendInput('8')">8</button>
-                <button class="col-md-3 calculator-button" (click)="appendInput('9')">9</button>
-                <button class="col-md-3 calculator-button" (click)="appendInput('*')">*</button>
+                <app-calculator-button 
+                    class="col-md-3"
+                    [isDarkMode]="isDarkMode"
+                    [inputValue]="{value:'7', actionType:1}"
+                    (handleOnButtonClick)="handleOnButtonClick($event)">
+                </app-calculator-button>                
+                <app-calculator-button 
+                    class="col-md-3"
+                    [isDarkMode]="isDarkMode"
+                    [inputValue]="{value:'8', actionType:1}"
+                    (handleOnButtonClick)="handleOnButtonClick($event)">
+                </app-calculator-button>   
+                <app-calculator-button 
+                    class="col-md-3"
+                    [isDarkMode]="isDarkMode"
+                    [inputValue]="{value:'9', actionType:1}"
+                    (handleOnButtonClick)="handleOnButtonClick($event)">
+                </app-calculator-button>   
+                <app-calculator-button 
+                    class="col-md-3"
+                    [isDarkMode]="isDarkMode"
+                    [inputValue]="{value:'*', actionType:1}"
+                    (handleOnButtonClick)="handleOnButtonClick($event)">
+                </app-calculator-button>   
             </div>
             <div class="row">
-                <button class="col-md-3 calculator-button" (click)="appendInput('4')">4</button>
-                <button class="col-md-3 calculator-button" (click)="appendInput('5')">5</button>
-                <button class="col-md-3 calculator-button" (click)="appendInput('6')">6</button>
-                <button class="col-md-3 calculator-button" (click)="appendInput('-')">-</button>
+                <app-calculator-button 
+                    class="col-md-3"
+                    [isDarkMode]="isDarkMode"
+                    [inputValue]="{value:'4', actionType:1}"
+                    (handleOnButtonClick)="handleOnButtonClick($event)">
+                </app-calculator-button>   
+                <app-calculator-button 
+                    class="col-md-3"
+                    [isDarkMode]="isDarkMode"
+                    [inputValue]="{value:'5', actionType:1}"
+                    (handleOnButtonClick)="handleOnButtonClick($event)">
+                </app-calculator-button>   
+                <app-calculator-button 
+                    class="col-md-3"
+                    [isDarkMode]="isDarkMode"
+                    [inputValue]="{value:'6', actionType:1}"
+                    (handleOnButtonClick)="handleOnButtonClick($event)">
+                </app-calculator-button>
+                <app-calculator-button 
+                    class="col-md-3"
+                    [isDarkMode]="isDarkMode"
+                    [inputValue]="{value:'-', actionType:1}"
+                    (handleOnButtonClick)="handleOnButtonClick($event)">
+                </app-calculator-button>
             </div>
             <div class="row">
-                <button class="col-md-3 calculator-button" (click)="appendInput('1')">1</button>
-                <button class="col-md-3 calculator-button" (click)="appendInput('2')">2</button>
-                <button class="col-md-3 calculator-button" (click)="appendInput('3')">3</button>
-                <button class="col-md-3 calculator-button" (click)="appendInput('+')">+</button>
+                <app-calculator-button 
+                    class="col-md-3"
+                    [isDarkMode]="isDarkMode"
+                    [inputValue]="{value:'1', actionType:1}"
+                    (handleOnButtonClick)="handleOnButtonClick($event)">
+                </app-calculator-button>
+                <app-calculator-button 
+                    class="col-md-3"
+                    [isDarkMode]="isDarkMode"
+                    [inputValue]="{value:'2', actionType:1}"
+                    (handleOnButtonClick)="handleOnButtonClick($event)">
+                </app-calculator-button>
+                <app-calculator-button 
+                    class="col-md-3"
+                    [isDarkMode]="isDarkMode"
+                    [inputValue]="{value:'3', actionType:1}"
+                    (handleOnButtonClick)="handleOnButtonClick($event)">
+                </app-calculator-button>
+                <app-calculator-button 
+                    class="col-md-3"
+                    [isDarkMode]="isDarkMode"
+                    [inputValue]="{value:'+', actionType:1}"
+                    (handleOnButtonClick)="handleOnButtonClick($event)">
+                </app-calculator-button>
             </div>
             <div class="row">
-                <button class="col-md-3 calculator-button" (click)="appendInput('0')">0</button>
-                <button class="col-md-3 calculator-button" (click)="appendInput('.')">.</button>
-                <button class="col-md-3 calculator-button" (click)="calculate()">=</button>
-                <button class="col-md-3 calculator-button" (click)="appendInput('/')">/</button>
+                <app-calculator-button 
+                    class="col-md-3"
+                    [isDarkMode]="isDarkMode"
+                    [inputValue]="{value:'0', actionType:1}"
+                    (handleOnButtonClick)="handleOnButtonClick($event)">
+                </app-calculator-button>
+                <app-calculator-button 
+                    class="col-md-3"
+                    [isDarkMode]="isDarkMode"
+                    [inputValue]="{value:'.', actionType:1}"
+                    (handleOnButtonClick)="handleOnButtonClick($event)">
+                </app-calculator-button>
+                <app-calculator-button 
+                    class="col-md-3"
+                    [isDarkMode]="isDarkMode"
+                    [inputValue]="{value:'=', actionType:3}"
+                    (handleOnButtonClick)="handleOnButtonClick($event)">
+                </app-calculator-button>
+                <app-calculator-button 
+                    class="col-md-3"
+                    [isDarkMode]="isDarkMode"
+                    [inputValue]="{value:'/', actionType:1}"
+                    (handleOnButtonClick)="handleOnButtonClick($event)">
+                </app-calculator-button>
             </div>
 </div>

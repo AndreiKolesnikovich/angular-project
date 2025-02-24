@@ -4,10 +4,11 @@
     border: solid var(--light-blue);
     border-radius: 3%;
     text-align: center;
-    margin: 1%;
-    width: 23%;
+    margin-top: 5%;;
+    width: 100%;
 }
 
 .dark-mode{
-    background-color: var(--blue);
+    background-color: var(--medium-blue);
+    border: solid var(--medium-blue);
 }
