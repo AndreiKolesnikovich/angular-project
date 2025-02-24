@@ -1,0 +1,23 @@
+<div [ngClass]="isDarkMode ? 'dark-mode' : '' " class="calculator mt-5">
+    <h2 class="text-center">Calculator</h2>
+            <app-calculator-display 
+                [displayValue]="displayData"
+                [isDarkMode]="isDarkMode">
+            </app-calculator-display>
+            <div class="row">  
+                <app-calculator-button 
+                    *ngFor="let input of inputRow1" [inputValue]="input"
+                    class="col-md-6"
+                    [isDarkMode]="isDarkMode"
+                    (handleOnButtonClick)="handleOnButtonClick($event)">
+                </app-calculator-button>
+            </div>
+            <div *ngFor="let inputRow of inputRows" class="row">
+                <app-calculator-button
+                    *ngFor="let input of inputRow" [inputValue]="input"
+                    class="col-md-3"
+                    [isDarkMode]="isDarkMode"
+                    (handleOnButtonClick)="handleOnButtonClick($event)">
+                </app-calculator-button>
+            </div>
+</div>

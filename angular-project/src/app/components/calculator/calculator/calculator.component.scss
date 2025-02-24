@@ -1,0 +1,16 @@
+.calculator {
+    padding: 1%;
+    border: 3px solid var(--light-blue);
+    border-radius: 5%;
+    margin: 5% 35% 35%;
+}
+
+.clear-button{
+    padding-top: 0;
+    width: 98%;
+}
+
+.dark-mode{
+    background-color: var(--light-blue);
+    border: 3px solid var(--medium-blue);
+}

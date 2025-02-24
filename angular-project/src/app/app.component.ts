@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-//import { RouterOutlet } from '@angular/router';
-import { UserInfoComponent } from './user-info/user-info.component';
-import { MoreInfoButtonComponent } from './more-info-button/more-info-button.component';
+import { AngularProjectFooterComponent } from './components/angular-project-footer/angular-project-footer.component';
+import { AngularProjectHeaderComponent } from './components/angular-project-header/angular-project-header.component';
 
 @Component({
   selector: 'app-root',
-  imports: [UserInfoComponent, MoreInfoButtonComponent],
+  imports: [AngularProjectFooterComponent, AngularProjectHeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

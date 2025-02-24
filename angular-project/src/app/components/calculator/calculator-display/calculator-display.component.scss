@@ -1,0 +1,13 @@
+.calculator-display{
+    border-color: var(--light-blue);
+    background-color: var(--light-blue);
+    width: 100%;
+    box-shadow: 2px 2px var(--medium-blue);
+    margin-bottom: 4%;
+}
+
+.dark-mode{
+    border-color: var(--medium-blue);
+    background-color: var(--medium-blue);
+    box-shadow: 2px 2px var(--light-blue);
+}
