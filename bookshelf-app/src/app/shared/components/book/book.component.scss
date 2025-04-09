@@ -1,0 +1,12 @@
+.book-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 10px;
+  transition: box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.book-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}

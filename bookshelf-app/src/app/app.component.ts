@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { AuthService } from './core/auth.service';
 
 @Component({
   selector: 'app-root',
   imports: [HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  providers: [HttpClient]
+  providers: [HttpClient, AuthService]
 })
 
 export class AppComponent {

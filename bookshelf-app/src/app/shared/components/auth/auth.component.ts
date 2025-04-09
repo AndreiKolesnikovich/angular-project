@@ -2,7 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CommonModule, NgIf } from '@angular/common';
-
 import { AuthService } from './../../../core/auth.service';
 
 @Component({
