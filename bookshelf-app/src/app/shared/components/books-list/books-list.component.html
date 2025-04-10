@@ -17,12 +17,7 @@
     <div *ngIf="errorMessage">{{ errorMessage }}</div>
     
     <div class="books-grid" *ngIf="!isLoading && filteredBooks.length > 0">
-      <div class="book-card" *ngFor="let book of filteredBooks">
-        <img [src]="book.coverImage" alt="{{ book.title }} cover" />
-        <h3>{{ book.title }}</h3>
-        <p><strong>Author:</strong> {{ book.author }}</p>
-        <p>{{ book.genre }}</p>
-      </div>
+      <app-book  *ngFor="let book of filteredBooks" [book]="book"></app-book>
     </div>
   
     <div *ngIf="filteredBooks.length === 0 && !isLoading">
