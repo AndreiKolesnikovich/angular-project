@@ -1,0 +1,5 @@
+<label for="genre">Genre</label>
+<select id="genre" [(ngModel)]="selectedGenre" (change)="setGenre(selectedGenre)">
+  <option value="" disabled>Select Genre</option>
+  <option *ngFor="let genre of genres" [value]="genre">{{ genre }}</option>
+</select>

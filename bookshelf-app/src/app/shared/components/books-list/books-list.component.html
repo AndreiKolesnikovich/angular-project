@@ -1,0 +1,26 @@
+<div class="books-list-container">
+    <h2>Bookshelf</h2>
+  
+    <form [formGroup]="filterForm" class="filter-controls">
+      <label for="author">Filter by Author:</label>
+      <input id="author" formControlName="author" />
+  
+      <label for="titleSearch">Search by Title:</label>
+      <input id="titleSearch" formControlName="titleSearch" />
+  
+      <button type="button" (click)="toggleSortDirection()">
+        Sort by Title: {{ sortDirection === 'asc' ? 'Ascending' : 'Descending' }}
+      </button>
+    </form>
+  
+    <div *ngIf="isLoading">Loading books...</div>
+    <div *ngIf="errorMessage">{{ errorMessage }}</div>
+    
+    <div class="books-grid" *ngIf="!isLoading && filteredBooks.length > 0">
+      <app-book  *ngFor="let book of filteredBooks" [book]="book"></app-book>
+    </div>
+  
+    <div *ngIf="filteredBooks.length === 0 && !isLoading">
+      <p>No books match your criteria.</p>
+    </div>
+  </div>

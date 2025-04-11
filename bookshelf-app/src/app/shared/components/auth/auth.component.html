@@ -1,0 +1,28 @@
+<div class="auth-container">
+    <h2>{{ isLoginMode ? 'Login' : 'Register' }}</h2>
+    <form [formGroup]="authForm" (ngSubmit)="onSubmit()">      
+      <div *ngIf="!isLoginMode">
+        <label for="username">Username</label>
+        <input id="username" formControlName="username" />
+        <div *ngIf="authForm.controls['username'].invalid && (authForm.controls['username'].touched || authForm.controls['username'].dirty)">
+          <small>Username is required.</small>
+        </div>
+      </div>
+  
+      <label for="email">Email</label>
+      <input id="email" formControlName="email" />
+      <div *ngIf="authForm.controls['email'].invalid && (authForm.controls['email'].touched || authForm.controls['email'].dirty)">
+      </div> 
+  
+      <label for="password">Password</label>
+      <input type="password" id="password" formControlName="password" />
+      <div *ngIf="authForm.controls['password'].invalid && (authForm.controls['password'].touched || authForm.controls['password'].dirty)">
+      </div>
+  
+      <button type="submit" [disabled]="authForm.invalid">{{ isLoginMode ? 'Login' : 'Register' }}</button>
+  
+      <button type="button" (click)="onSwitchMode()">
+        Switch to {{ isLoginMode ? 'Register' : 'Login' }}
+      </button>
+    </form>
+  </div>

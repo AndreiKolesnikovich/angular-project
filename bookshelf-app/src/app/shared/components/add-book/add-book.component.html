@@ -1,0 +1,17 @@
+<div class="add-book-container">
+    <h2>Add New Book</h2>
+    <form [formGroup]="addBookForm" (ngSubmit)="onSubmit()">
+      <label for="title">Title</label>
+      <input id="title" formControlName="title" required />
+      
+      <label for="author">Author</label>
+      <input id="author" formControlName="author" required />
+      
+      <app-genre formControlName="genre"></app-genre>
+      
+      <label for="coverImage">Cover Image URL</label>
+      <input id="coverImage" formControlName="coverImage" />
+      
+      <button type="submit" [disabled]="addBookForm.invalid">Add Book</button>
+    </form>
+  </div>
